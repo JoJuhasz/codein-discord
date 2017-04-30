@@ -1,0 +1,10 @@
+<nav class="nav flex-column">
+    {% for member in members %}
+        <a class="nav-link" href="#">
+            {% if member.user.avatar != "" %}
+                <img class="rounded-circle discord-member-avatar" src="https://discordapp.com/api/users/{{ member.user.id }}/avatars/{{ member.user.avatar }}.jpg" alt="{{ member.user.username }}" />
+            {% endif %}
+            <span class="discord-member-username">{{ member.user.username }}</span>
+        </a>
+    {% endfor %}
+</nav>

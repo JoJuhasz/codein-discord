@@ -1,0 +1,19 @@
+fields:
+    discord_id:
+        label: 'codein.discord::lang.guild.id'
+        oc.commentPosition: ''
+        span: auto
+        required: 1
+        type: text
+    name:
+        label: 'codein.discord::lang.guild.name'
+        oc.commentPosition: ''
+        span: auto
+        required: 1
+        type: text
+    description:
+        label: 'codein.discord::lang.guild.description'
+        span: full
+        size: small
+        oc.commentPosition: ''
+        type: richeditor

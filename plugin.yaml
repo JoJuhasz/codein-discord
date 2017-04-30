@@ -1,0 +1,31 @@
+plugin:
+    name: 'codein.discord::lang.plugin.name'
+    description: 'codein.discord::lang.plugin.description'
+    author: Codein
+    icon: oc-icon-wechat
+    homepage: 'http://www.codein.be'
+navigation:
+    codein-discord-main-menu:
+        label: 'codein.discord::lang.menu.main-menu'
+        url: codein/discord/guilds
+        icon: icon-wechat
+        sideMenu:
+            codein-discord-guilds-submenu:
+                label: 'codein.discord::lang.menu.guilds'
+                url: codein/discord/guilds
+                icon: icon-server
+                permissions:
+                    - manage_guilds
+            codein-discord-bots-submenu:
+                label: 'codein.discord::lang.menu.bots'
+                url: codein/discord/bots
+                icon: icon-android
+                permissions:
+                    - manage_bots
+permissions:
+    manage_guilds:
+        tab: 'Discord API'
+        label: 'Manage guilds'
+    manage_bots:
+        tab: 'Discord API'
+        label: 'Manage bots'

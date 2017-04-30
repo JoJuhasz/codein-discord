@@ -1,0 +1,13 @@
+name: Bots
+modelClass: Codein\Discord\Models\Bot
+form: $/codein/discord/models/bot/fields.yaml
+defaultRedirect: codein/discord/bots
+create:
+    title: 'codein.discord::lang.bot.create_bot'
+    redirect: 'codein/discord/bots/update/:id'
+    redirectClose: codein/discord/bots
+update:
+    title: 'codein.discord::lang.bot.edit_bot'
+    redirect: codein/discord/bots
+    redirectClose: codein/discord/bots
+preview: {  }

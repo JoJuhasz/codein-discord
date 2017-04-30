@@ -1,0 +1,11 @@
+title: 'codein.discord::lang.guild.manage_guilds'
+modelClass: Codein\Discord\Models\Guild
+list: $/codein/discord/models/guild/columns.yaml
+recordUrl: 'codein/discord/guilds/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

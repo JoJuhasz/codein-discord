@@ -1,0 +1,11 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table codein_discord_guilds'
+    - builder_table_create_codein_discord_guilds.php
+1.0.3:
+    - 'Updated table codein_discord_guilds'
+    - builder_table_update_codein_discord_guilds.php
+1.0.4:
+    - 'Created table codein_discord_bots'
+    - builder_table_create_codein_discord_bots.php

@@ -1,0 +1,25 @@
+fields:
+    name:
+        label: 'codein.discord::lang.bot.name'
+        oc.commentPosition: ''
+        span: auto
+        required: 1
+        type: text
+    token:
+        label: 'codein.discord::lang.bot.token'
+        oc.commentPosition: ''
+        span: auto
+        required: 1
+        type: text
+    client_id:
+        label: 'codein.discord::lang.bot.client_id'
+        oc.commentPosition: ''
+        span: auto
+        required: 1
+        type: text
+    client_secret:
+        label: 'codein.discord::lang.bot.client_secret'
+        span: auto
+        oc.commentPosition: ''
+        required: 1
+        type: text

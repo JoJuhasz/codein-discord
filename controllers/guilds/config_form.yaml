@@ -1,0 +1,13 @@
+name: Guilds
+modelClass: Codein\Discord\Models\Guild
+form: $/codein/discord/models/guild/fields.yaml
+defaultRedirect: codein/discord/guilds
+create:
+    title: 'codein.discord::lang.guild.create_guild'
+    redirect: 'codein/discord/guilds/update/:id'
+    redirectClose: codein/discord/guilds
+update:
+    title: 'codein.discord::lang.guild.edit_guild'
+    redirect: codein/discord/guilds
+    redirectClose: codein/discord/guilds
+preview: {  }

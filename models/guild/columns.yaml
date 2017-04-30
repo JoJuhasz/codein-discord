@@ -1,0 +1,8 @@
+columns:
+    id:
+        label: id
+        type: number
+        width: 50px
+    name:
+        label: name
+        type: text

@@ -1,0 +1,73 @@
+{% if channel %}
+
+
+        <div class="channel-heading">
+            <span class="channel-title">#{{ channel.name }}</span> | <span class="channel-topic mb-0">{{ channel.topic }}</span>
+        </div>
+
+        <div class="channel-messages">
+
+            {% set previous = null %}
+            {% for message in messages %}
+
+                {% if previous != message.author.id %}
+
+                    {% if previous != null %}
+                            </div>
+                        </div>
+                    {% endif %}
+
+                <div class="flex-column align-items-start channel-message">
+
+                    <div class="d-flex w-100 align-items-center message-author mb-2">
+                        {% if message.author.avatar != "" %}
+                            <img class="rounded-circle mr-2 avatar" src="https://discordapp.com/api/users/{{ message.author.id }}/avatars/{{ message.author.avatar }}.jpg" alt="{{ message.author.username }}" />
+                        {% endif %}
+                        <h5 class="mb-1 mr-2 username">
+                            {{ message.author.username }}
+                        </h5>
+                        <small class="message-date">{{ message.timestamp|date("d/m/Y H:i:s", "Europe/Paris") }}</small>
+                    </div>
+                    <div class="message-messages pl-3 pr-3">
+                {% endif %}
+                    <div class="d-flex w-100 justify-content-between align-items-center message-item p-1 mb-1">
+                        <p class="m-0">{{ message.content|nl2br }}</p>
+                        <small class="message-date">{{ message.timestamp|date("d/m/Y H:i:s", "Europe/Paris") }}</small>
+                    </div>
+                {% set previous = message.author.id %}
+
+            {% endfor %}
+
+                    </div>
+                </div>
+        </div>
+
+
+
+
+
+
+
+    {% if __SELF__.property('allow_send_messages') %}
+
+        <div class="form-message">
+            <form data-request="onSendMessage" data-request-update="'@messages': '#messages'">
+                <input type="hidden" name="channel_id" value="{{ channel.id }}">
+
+
+                <div class="form-group">
+                    <textarea id="form-message" name="message" class="form-control" placeholder="{{ trans('codein.discord::lang.message.send') }}{{ channel.name }}"></textarea>
+                </div>
+                <input type="submit" value="{{ trans('codein.discord::lang.message.send') }}" class="btn btn-block btn-discord" />
+            </form>
+        </div>
+
+
+    {% endif %}
+
+
+{% endif %}
+
+<script type="text/javascript">
+    window.scrollTo(0,document.body.scrollHeight);
+</script>

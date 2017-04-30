@@ -1,0 +1,16 @@
+{
+  "name": "codein/discord-plugin",
+  "type": "october-plugin",
+  "description": "OctoberCMS plugin for Discord",
+  "homepage": "https://www.codein.be",
+  "authors": [
+    {
+      "name": "Jonathan Juhasz",
+      "email": "jonathan.juahsz@gmail.com"
+    }
+  ],
+  "require": {
+    "guzzlehttp/guzzle": "~6.0",
+    "team-reflex/discord-php": "*"
+  }
+}

@@ -1,0 +1,9 @@
+<nav class="nav flex-column">
+    {% for channel in channels %}
+        {% if channel.type == "text" %}
+            <a class="nav-link" href="#" data-request="onSelectChannel" data-request-data="channel:'{{ channel.id }}'" data-request-update="'@messages': '#messages'">
+                #{{ channel.name }}
+            </a>
+        {% endif %}
+    {% endfor %}
+</nav>

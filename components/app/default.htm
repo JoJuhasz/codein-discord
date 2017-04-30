@@ -1,0 +1,19 @@
+{% set channels = __SELF__.channels %}
+{% set members = __SELF__.members %}
+
+
+<div class="row discordapp">
+    <div class="col-2 channels">
+        {% partial '@channels' channels=channels %}
+    </div>
+    <div class="col messages">
+        <div id="messages">
+            {% partial '@messages' %}
+        </div>
+    </div>
+    {% if members %}
+        <div class="col-2 members">
+            {% partial '@members' members=members %}
+        </div>
+    {% endif %}
+</div>

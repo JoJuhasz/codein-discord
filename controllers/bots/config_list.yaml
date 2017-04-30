@@ -1,0 +1,11 @@
+title: 'codein.discord::lang.bot.manage_bots'
+modelClass: Codein\Discord\Models\Bot
+list: $/codein/discord/models/bot/columns.yaml
+recordUrl: 'codein/discord/bots/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
