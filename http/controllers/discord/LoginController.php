@@ -42,7 +42,8 @@ class LoginController extends Controller
         $botId = Session::get('bot_id');
         $redirect = Session::get('redirect');
         if(!$botId) {
-            die('An error occured');
+            Flash::error(trans('codein.discord::lang.discord.an_error_occured'));
+            return Redirect::to('/');
         }
         $bot = Bot::find($botId);
         $discord = new Discord(null, $bot);
@@ -67,13 +68,13 @@ class LoginController extends Controller
                         Flash::success(trans('codein.discord::lang.discord.account_created'));
                     }
                 } else {
-                    Flash::error('No Discord User found');
+                    Flash::error(trans('codein.discord::lang.discord.no_user_found'));
                 }
             } else {
-                Flash::error('No valid token');
+                Flash::error(trans('codein.discord::lang.discord.no_valid_token'));
             }
         } else {
-            Flash::error('No valid authorization code');
+            Flash::error(trans('codein.discord::lang.discord.no_valid_auth'));
         }
         return Redirect::to('/');
     }
