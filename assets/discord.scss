@@ -1,0 +1,90 @@
+$blurple      : #7289DA !default;
+$fullwhite    : #FFFFFF !default;
+$greyple      : #99AAB5 !default;
+$light-dark   : #36393e !default;
+$almost-dark  : #2e3136 !default;
+$dark         : #2C2F33 !default;
+$quite-black  : #23272A !default;
+
+$column-padding: 30px 10px;
+
+.discordapp {
+
+  background: $light-dark;
+  color: $fullwhite;
+
+  .channels{
+    background: $almost-dark;
+    padding: $column-padding;
+    nav{ position: fixed; min-height: 400px; }
+    .nav-link {
+      color: $greyple;
+    }
+  }
+
+  .messages{
+    padding: $column-padding;
+    .channel-heading {
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid $greyple;
+      .channel-title {
+        font-weight: 700;
+        font-size: 1.2em;
+        color: $fullwhite;
+      }
+      .channel-topic {
+        color: $greyple;
+      }
+    }
+    .channel-messages {
+      .channel-message {
+        padding: 10px 0;
+        margin-bottom: 10px;
+        border-bottom: 1px solid $greyple;
+        .message-author {
+          .avatar {
+            width: 30px;
+          }
+          .message-date {
+            color: $greyple;
+          }
+        }
+        .message-item {
+          .message-date {
+            display: none;
+            color: $greyple;
+            font-style: italic;
+            font-size: 70%;
+          }
+        }
+        .message-item:hover{
+          background: lighten($light-dark, 10%);
+          .message-date {
+            display: block;
+          }
+        }
+      }
+    }
+    .form-message {
+      textarea {
+        width: 100%;
+        background: lighten($light-dark, 10%);
+        border: 1px solid lighten($light-dark, 40%);
+        border-radius: 5px;
+        color: $fullwhite;
+      }
+    }
+  }
+
+  .members{
+    padding: $column-padding;
+    background: $almost-dark;
+    .nav-link {
+      color: $greyple;
+    }
+  }
+
+}
+
+
