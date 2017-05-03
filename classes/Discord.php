@@ -170,7 +170,7 @@ class Discord
             'content' => $message
         );
 
-        $response = $client->request('POST', $url, [
+        $client->request('POST', $url, [
             'headers' => [
                 'Authorization' => 'Bot '.$this->bot->token,
                 'User-Agent' => self::USER_AGENT,
