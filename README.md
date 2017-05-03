@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/da390af857bc4932af0cd5f93ef8fbdb)](https://www.codacy.com/app/JoJuhasz/codein-discord?utm_source=github.com&utm_medium=referral&utm_content=JoJuhasz/codein-discord&utm_campaign=badger)
 [![Build Status](https://travis-ci.org/JoJuhasz/codein-discord.svg?branch=master)](https://travis-ci.org/JoJuhasz/codein-discord)
 
 # codein-discord
